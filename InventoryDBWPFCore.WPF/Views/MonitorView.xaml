@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="InventoryDBWPFCore.WPF.Views.MonitorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InventoryDBWPFCore.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="White">
+            <Label Content="Inventory Tag Number:"/>
+            <TextBox x:Name="MonTagNum" Width="150" HorizontalAlignment="Left"/>
+            <Label Content="Monitor Make:"/>
+            <TextBox x:Name="MonMake" Width="150" HorizontalAlignment="Left"/>
+            <Label Content="Monitor Model:"/>
+            <TextBox x:Name="MonModel" Width="150" HorizontalAlignment="Left"/>
+            <Label Content="Monitor Serial Number:"/>
+            <TextBox x:Name="MonSerNum" Width="150" HorizontalAlignment="Left"/>
+            <Label Content="Monitor Size:"/>
+            <TextBox x:Name="MonSize" Width="150" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <DataGrid x:Name="MonitorGrid" Grid.Column="1" ItemsSource="{Binding}" AutoGenerateColumns="False"/>
+    </Grid>
+</UserControl>

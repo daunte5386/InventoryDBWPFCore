@@ -1,0 +1,34 @@
+﻿<Application x:Class="InventoryDBWPFCore.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:InventoryDBWPFCore.WPF.ViewModels"
+             xmlns:views="clr-namespace:InventoryDBWPFCore.WPF.Views"
+             xmlns:local="clr-namespace:InventoryDBWPFCore.WPF">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:ComputerViewModel}">
+                <views:ComputerView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:MonitorViewModel}">
+                <views:MonitorView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:PrinterViewModel}">
+                <views:PrinterView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:ServerViewModel}">
+                <views:ServerView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>
