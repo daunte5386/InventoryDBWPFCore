@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="InventoryDBWPFCore.WPF.Controls.NavigationBarCon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InventoryDBWPFCore.WPF.Controls"
+             xmlns:nav="clr-namespace:InventoryDBWPFCore.WPF.State.Navigators"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="800">
+    <Grid Background="{DynamicResource BrushPrimary2}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <RadioButton Grid.Column="0" Content="Computer" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Computer}"/>
+        <RadioButton Grid.Column="1" Content="Monitor" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Monitor}"/>
+        <RadioButton Grid.Column="2" Content="Printer" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Printer}"/>
+        <RadioButton Grid.Column="3" Content="Server" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Server}"/>
+    </Grid>
+</UserControl>
